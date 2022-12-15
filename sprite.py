@@ -23,3 +23,8 @@ class text:
         textrect = textsf.get_rect()
         self.sf = textsf
         self.rect = textrect
+def Init(screenSize):
+    """Returns Screen"""
+    pg.init()
+    dis = pg.display.set_mode(screenSize)
+    return dis
