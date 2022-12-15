@@ -10,11 +10,8 @@ class sprite:
         self.size = size
         self.rect = rect
         self.sf = sf
-    def Disp(self,screen = None):
-        if not screen == None:
-            screen.blit(image, rect)
-        else:
-            dis.blit(self.sf, self.rect)
+    def Disp(self,screen):
+        screen.blit(image, rect)
 class spritefi:
     def __init__(self,zoom,path,angle):
         sf_raw = pg.image.load(path).convert_alpha()
@@ -22,11 +19,8 @@ class spritefi:
         rect = sf.get_rect(topleft = (0,0))
         self.sf = sf
         self.rect = rect
-    def Disp(self,screen = None):
-        if not screen == None:
-            screen.blit(image, rect)
-        else:
-            dis.blit(self.sf, self.rect)
+    def Disp(self,screen):
+        screen.blit(image, rect)
 class text:
     def __init__(self,text,fontpath,Color):
         font = pg.font.Font(fontpath, 50)
@@ -34,11 +28,8 @@ class text:
         textrect = textsf.get_rect()
         self.sf = textsf
         self.rect = textrect
-    def Disp(self,screen = None):
-        if not screen == None:
-            screen.blit(image, rect)
-        else:
-            dis.blit(self.sf, self.rect)
+    def Disp(self,screen):
+        screen.blit(image, rect)
 
 def Init(screenSize):
     """Returns Screen"""
