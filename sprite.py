@@ -1,5 +1,6 @@
 import pygame as pg
 #By adamsonacho on github!
+dis = None
 class sprite:
     def __init__(self,size,DoFill,ColorOfFill):
         sf = pg.Surface(size)
@@ -23,6 +24,12 @@ class text:
         textrect = textsf.get_rect()
         self.sf = textsf
         self.rect = textrect
+    def Disp(self,screen = None):
+        if not screen == None:
+            screen.blit(image, rect)
+        else:
+            dis.blit(self.sf, self.rect)
+
 def Init(screenSize):
     """Returns Screen"""
     pg.init()
