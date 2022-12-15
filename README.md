@@ -1,2 +1,2 @@
 # sprite
-a sprite lib for pyjama
+a sprite lib for pygama
