@@ -30,9 +30,3 @@ class text:
         self.rect = textrect
     def Disp(self,screen):
         screen.blit(self.sf, self.rect)
-
-def Init(screenSize):
-    """Returns Screen"""
-    pg.init()
-    dis = pg.display.set_mode(screenSize)
-    return dis
